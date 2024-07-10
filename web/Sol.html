@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing and Meal Planning Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional styling for slides */
+        .slide {
+            display: none;
+            height: 100vh;
+            scroll-snap-align: start;
+            overflow-y: auto;
+        }
+        .slide.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Main Slide -->
+    <div id="main-slide" class="slide active bg-gray-100 text-center">
+        <header class="bg-green-600 text-white p-4">
+            <div class="container mx-auto">
+                <h1 class="text-2xl font-bold">Recipe Sharing and Meal Planning Platform</h1>
+            </div>
+        </header>
+
+        <div class="p-4">
+            <div class="text-2xl font-bold mb-4">
+                Hello username!
+            </div>
+
+            <div class="logo mb-4">
+                <img src="logo.png" alt="Logo" class="h-12 w-12">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="#share-recipe-slide" class="block bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
+                    <img src="make-a-recipe.png" alt="Share a Recipe!" class="w-full">
+                    <div class="p-4">
+                        <h2 class="text-xl font-bold">Share a Recipe!</h2>
+                    </div>
+                </a>
+
+                <a href="#plan-meal-slide" class="block bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
+                    <img src="plan-a-meal.png" alt="Plan a Meal!" class="w-full">
+                    <div class="p-4">
+                        <h2 class="text-xl font-bold">Plan a Meal!</h2>
+                    </div>
+                </a>
+
+                <a href="#shopping-list-slide" class="block bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
+                    <img src="shopping-list.png" alt="Shopping List!" class="w-full">
+                    <div class="p-4">
+                        <h2 class="text-xl font-bold">Shopping List!</h2>
+                    </div>
+                </a>
+
+                <a href="#nutritional-calculator-slide" class="block bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
+                    <img src="nutrition-calc.png" alt="Nutritional Calculator!" class="w-full">
+                    <div class="p-4">
+                        <h2 class="text-xl font-bold">Nutritional Calculator!</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share a Recipe Slide -->
+    <div id="share-recipe-slide" class="slide bg-gray-100">
+        <a href="#main-slide" class="absolute top-4 left-4 bg-white text-gray-700 px-2 py-1 rounded shadow">Back to Main</a>
+        <main class="container mx-auto p-4">
+            <section id="share-recipe" class="bg-white rounded shadow p-4 mb-6">
+                <h2 class="text-xl font-bold mb-4">Share a Recipe</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="recipe-title" class="block text-gray-700">Recipe Title</label>
+                        <input type="text" id="recipe-title" class="w-full p-2 border rounded">
+                    </div>
+                    <div class="mb-4">
+                        <label for="recipe-ingredients" class="block text-gray-700">Ingredients</label>
+                        <textarea id="recipe-ingredients" class="w-full p-2 border rounded" rows="4"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="recipe-steps" class="block text-gray-700">Steps</label>
+                        <textarea id="recipe-steps" class="w-full p-2 border rounded" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="bg-green-600 text-white py-2 px-4 rounded">Share Recipe</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Plan a Meal Slide -->
+    <div id="plan-meal-slide" class="slide bg-gray-100">
+        <a href="#main-slide" class="absolute top-4 left-4 bg-white text-gray-700 px-2 py-1 rounded shadow">Back to Main</a>
+        <main class="container mx-auto p-4">
+            <section id="plan-meal" class="bg-white rounded shadow p-4 mb-6">
+                <h2 class="text-xl font-bold mb-4">Plan a Meal</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="meal-date" class="block text-gray-700">Date</label>
+                        <input type="date" id="meal-date" class="w-full p-2 border rounded">
+                    </div>
+                    <div class="mb-4">
+                        <label for="meal-recipes" class="block text-gray-700">Recipes</label>
+                        <input type="text" id="meal-recipes" class="w-full p-2 border rounded">
+                    </div>
+                    <button type="submit" class="bg-green-600 text-white py-2 px-4 rounded">Plan Meal</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Shopping List Slide -->
+    <div id="shopping-list-slide" class="slide bg-gray-100">
+        <a href="#main-slide" class="absolute top-4 left-4 bg-white text-gray-700 px-2 py-1 rounded shadow">Back to Main</a>
+        <main class="container mx-auto p-4">
+            <section id="shopping-list" class="bg-white rounded shadow p-4 mb-6">
+                <h2 class="text-xl font-bold mb-4">Shopping List</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="shopping-items" class="block text-gray-700">Items</label>
+                        <textarea id="shopping-items" class="w-full p-2 border rounded" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="bg-green-600 text-white py-2 px-4 rounded">Generate Shopping List</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Nutritional Calculator Slide -->
+    <div id="nutritional-calculator-slide" class="slide bg-gray-100">
+        <a href="#main-slide" class="absolute top-4 left-4 bg-white text-gray-700 px-2 py-1 rounded shadow">Back to Main</a>
+        <main class="container mx-auto p-4">
+            <section id="nutritional-calculator" class="bg-white rounded shadow p-4 mb-6">
+                <h2 class="text-xl font-bold mb-4">Nutritional Calculator</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="nutrition-ingredients" class="block text-gray-700">Ingredients</label>
+                        <textarea id="nutrition-ingredients" class="w-full p-2 border rounded" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="bg-green-600 text-white py-2 px-4 rounded">Calculate Nutrition</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Script for handling slide navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to handle slide navigation
+            function navigateToSlide(slideId) {
+                // Hide all slides
+                document.querySelectorAll('.slide').forEach(function(slide) {
+                    slide.classList.remove('active');
+                });
+                // Show the selected slide
+                document.querySelector(slideId).classList.add('active');
+            }
+
+            // Add click event listeners to main slide links
+            document.querySelectorAll('#main-slide a').forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var targetSlideId = link.getAttribute('href');
+                    navigateToSlide(targetSlideId);
+                });
+            });
+
+            // Add click event listeners to "Back to Main" links in secondary slides
+            document.querySelectorAll('.slide a[href="#main-slide"]').forEach(function(backLink) {
+                backLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    navigateToSlide('#main-slide');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
